@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Actualidad, contexto y voces que importan."
+    />
+    <title>Perspectiva | Actualidad con contexto</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Perspectiva, inicio">
+          <span class="brand-mark" aria-hidden="true"
+            ><svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M5 18 12 5l7 13"
+                stroke="currentColor"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.2 14h7.6"
+                stroke="currentColor"
+                stroke-width="2.6"
+                stroke-linecap="round"
+              /></svg
+          ></span>
+          Perspectiva
+        </a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="index.html" aria-current="page">Inicio</a>
+          <a href="noticias.html">Noticias</a>
+          <a href="favoritos.html" class="nav-favorites"
+            >Favoritos
+            <span
+              class="favorites-count"
+              id="favorites-count"
+              aria-label="0 favoritos"
+              >0</span
+            ></a
+          >
+          <a href="contacto.html">Contacto</a>
+          <a href="gestion.html">Gestión</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__content">
+          <p class="eyebrow">Actualidad con contexto</p>
+          <h1 id="hero-title">Lo que ocurre merece una mirada más amplia.</h1>
+          <p>
+            Historias locales, ciencia, cultura y clima explicados con claridad
+            para entender el presente y participar en la conversación.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="noticias.html"
+              >Explorar noticias</a
+            >
+            <a class="button button--secondary" href="#destacadas"
+              >Ver selección</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="destacadas" aria-labelledby="featured-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Selección editorial</p>
+              <h2 class="section-title" id="featured-title">
+                Noticias para detenerse a pensar
+              </h2>
+            </div>
+            <a class="text-link" href="noticias.html">Ver todas</a>
+          </div>
+          <div class="news-grid" id="featured-news" aria-live="polite">
+            <article class="news-card">
+              <div
+                class="news-card__visual visual visual--city"
+                aria-hidden="true"
+              ></div>
+              <div class="news-card__body">
+                <div class="news-card__meta">
+                  <span class="tag">Ciudad</span
+                  ><time datetime="2026-08-21">21 ago. 2026</time>
+                </div>
+                <h3>Una nueva forma de recorrer los barrios a pie</h3>
+                <p>
+                  Iniciativas de movilidad tranquila recuperan la escala humana
+                  de las calles.
+                </p>
+                <a class="text-link" href="detalle.html?id=1">Leer historia</a>
+              </div>
+            </article>
+            <article class="news-card">
+              <div
+                class="news-card__visual visual visual--climate"
+                aria-hidden="true"
+              ></div>
+              <div class="news-card__body">
+                <div class="news-card__meta">
+                  <span class="tag">Clima</span
+                  ><time datetime="2026-08-18">18 ago. 2026</time>
+                </div>
+                <h3>El agua de lluvia vuelve a ser parte de la ciudad</h3>
+                <p>
+                  Pequeñas soluciones urbanas están cambiando cómo se gestiona
+                  el agua.
+                </p>
+                <a class="text-link" href="detalle.html?id=2">Leer historia</a>
+              </div>
+            </article>
+            <article class="news-card">
+              <div
+                class="news-card__visual visual visual--science"
+                aria-hidden="true"
+              ></div>
+              <div class="news-card__body">
+                <div class="news-card__meta">
+                  <span class="tag">Ciencia</span
+                  ><time datetime="2026-08-15">15 ago. 2026</time>
+                </div>
+                <h3>Laboratorios que salen a escuchar el territorio</h3>
+                <p>
+                  La investigación colaborativa conecta datos, comunidad y
+                  soluciones.
+                </p>
+                <a class="text-link" href="detalle.html?id=3">Leer historia</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--compact" aria-labelledby="topics-title">
+        <div class="container">
+          <p class="eyebrow">Encuentra tu tema</p>
+          <h2 class="section-title" id="topics-title">
+            Lecturas para mirar desde distintos ángulos
+          </h2>
+          <div class="category-row" id="category-list">
+            <a class="category-link" href="noticias.html?category=Ciudad"
+              ><strong>Ciudad</strong><span>Vida urbana y territorio</span></a
+            >
+            <a class="category-link" href="noticias.html?category=Clima"
+              ><strong>Clima</strong><span>Ambiente y adaptación</span></a
+            >
+            <a class="category-link" href="noticias.html?category=Ciencia"
+              ><strong>Ciencia</strong
+              ><span>Ideas que se convierten en evidencia</span></a
+            >
+            <a class="category-link" href="noticias.html?category=Cultura"
+              ><strong>Cultura</strong
+              ><span>Creación, memoria y comunidad</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--compact">
+        <div class="container home-callout">
+          <p class="eyebrow">Conversaciones abiertas</p>
+          <h2>¿Hay una historia que deberíamos contar?</h2>
+          <p>
+            Tu mirada puede abrir nuevas preguntas. Escríbenos y ayúdanos a
+            construir una agenda informativa más cercana.
+          </p>
+          <a class="button button--primary" href="contacto.html"
+            >Contactar al equipo</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Perspectiva · Periodismo para comprender.</p>
+        <p>Proyecto académico · 2026</p>
+      </div>
+    </footer>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lectura completa en Perspectiva." />
+    <title>Detalle de noticia | Perspectiva</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Perspectiva, inicio"
+          ><span class="brand-mark" aria-hidden="true"
+            ><svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M5 18 12 5l7 13"
+                stroke="currentColor"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.2 14h7.6"
+                stroke="currentColor"
+                stroke-width="2.6"
+                stroke-linecap="round"
+              /></svg></span
+          >Perspectiva</a
+        >
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a
+          ><a href="noticias.html" aria-current="page">Noticias</a
+          ><a href="favoritos.html" class="nav-favorites"
+            >Favoritos
+            <span
+              class="favorites-count"
+              id="favorites-count"
+              aria-label="0 favoritos"
+              >0</span
+            ></a
+          ><a href="contacto.html">Contacto</a
+          ><a href="gestion.html">Gestión</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content" class="article">
+      <!-- Este contenido ofrece una lectura útil antes de que el módulo reemplace los datos según ?id=. -->
+      <div class="article__layout">
+        <article id="article-detail">
+          <a class="back-link" href="noticias.html">Volver a noticias</a>
+          <div class="article__meta">
+            <span class="tag">Ciudad</span
+            ><time datetime="2026-08-21">21 de agosto de 2026</time
+            ><span>Por Equipo Perspectiva</span>
+          </div>
+          <h1>Una nueva forma de recorrer los barrios a pie</h1>
+          <p class="article__lead">
+            Cuando las distancias se miden en conversaciones y no en minutos,
+            las calles recuperan un papel central en la vida de quienes las
+            habitan.
+          </p>
+          <div
+            class="article__hero-visual visual visual--city"
+            aria-hidden="true"
+          ></div>
+          <div class="article__body">
+            <p>
+              En distintos barrios, caminar dejó de ser solo una forma de
+              llegar. Las rutas cotidianas se han convertido en espacios para
+              reconocer comercios, conversar con vecinos y descubrir los
+              pequeños cambios que transforman una cuadra.
+            </p>
+            <p>
+              Las iniciativas comparten una idea simple: poner a las personas en
+              el centro de las decisiones urbanas. Bancas, cruces seguros,
+              sombra y señalización clara no son detalles aislados; juntos
+              construyen una experiencia más amable.
+            </p>
+            <h2>Una escala más cercana</h2>
+            <p>
+              El desafío consiste en escuchar a quienes recorren estos trayectos
+              todos los días. Sus observaciones permiten priorizar
+              intervenciones pequeñas, medibles y con impacto directo en el
+              bienestar colectivo.
+            </p>
+          </div>
+        </article>
+        <div class="article__actions">
+          <button
+            class="button button--secondary"
+            id="favorite-toggle"
+            type="button"
+            aria-pressed="false"
+          >
+            Guardar en favoritos
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Perspectiva · Periodismo para comprender.</p>
+        <p>Proyecto académico · 2026</p>
+      </div>
+    </footer>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/detalle.js"></script>
+  </body>
+</html>

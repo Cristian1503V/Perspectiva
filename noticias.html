@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explora todas las noticias de Perspectiva."
+    />
+    <title>Noticias | Perspectiva</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Perspectiva, inicio"
+          ><span class="brand-mark" aria-hidden="true"
+            ><svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M5 18 12 5l7 13"
+                stroke="currentColor"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.2 14h7.6"
+                stroke="currentColor"
+                stroke-width="2.6"
+                stroke-linecap="round"
+              /></svg></span
+          >Perspectiva</a
+        >
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a
+          ><a href="noticias.html" aria-current="page">Noticias</a
+          ><a href="favoritos.html" class="nav-favorites"
+            >Favoritos
+            <span
+              class="favorites-count"
+              id="favorites-count"
+              aria-label="0 favoritos"
+              >0</span
+            ></a
+          ><a href="contacto.html">Contacto</a
+          ><a href="gestion.html">Gestión</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="page-intro" aria-labelledby="page-title">
+        <div class="container">
+          <p class="eyebrow">Archivo editorial</p>
+          <h1 id="page-title">
+            Noticias para seguir el pulso de lo que importa.
+          </h1>
+          <p>
+            Explora historias, ideas y preguntas que conectan el presente con
+            las decisiones de todos los días.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <form class="listing-controls" id="news-filters" role="search">
+            <div>
+              <label class="field-label" for="news-search"
+                >Buscar noticias</label
+              ><input
+                class="text-input"
+                id="news-search"
+                name="search"
+                type="search"
+                placeholder="Título, tema o palabra clave"
+                autocomplete="off"
+              />
+            </div>
+            <div>
+              <label class="field-label" for="category-filter">Categoría</label
+              ><select
+                class="select-input"
+                id="category-filter"
+                name="category"
+              >
+                <option value="">Todas las categorías</option>
+                <option value="Ciudad">Ciudad</option>
+                <option value="Clima">Clima</option>
+                <option value="Ciencia">Ciencia</option>
+                <option value="Cultura">Cultura</option>
+              </select>
+            </div>
+          </form>
+          <div class="results-bar">
+            <p id="results-count" aria-live="polite">
+              Mostrando noticias recientes
+            </p>
+            <p>Ordenadas por fecha</p>
+          </div>
+          <div class="news-grid" id="news-grid" aria-live="polite">
+            <article class="news-card">
+              <div
+                class="news-card__visual visual visual--city"
+                aria-hidden="true"
+              ></div>
+              <div class="news-card__body">
+                <div class="news-card__meta">
+                  <span class="tag">Ciudad</span
+                  ><time datetime="2026-08-21">21 ago. 2026</time>
+                </div>
+                <h2>Una nueva forma de recorrer los barrios a pie</h2>
+                <p>
+                  Iniciativas de movilidad tranquila recuperan la escala humana
+                  de las calles.
+                </p>
+                <a class="text-link" href="detalle.html?id=1">Leer historia</a>
+              </div>
+            </article>
+            <article class="news-card">
+              <div
+                class="news-card__visual visual visual--climate"
+                aria-hidden="true"
+              ></div>
+              <div class="news-card__body">
+                <div class="news-card__meta">
+                  <span class="tag">Clima</span
+                  ><time datetime="2026-08-18">18 ago. 2026</time>
+                </div>
+                <h2>El agua de lluvia vuelve a ser parte de la ciudad</h2>
+                <p>
+                  Pequeñas soluciones urbanas están cambiando cómo se gestiona
+                  el agua.
+                </p>
+                <a class="text-link" href="detalle.html?id=2">Leer historia</a>
+              </div>
+            </article>
+            <article class="news-card">
+              <div
+                class="news-card__visual visual visual--science"
+                aria-hidden="true"
+              ></div>
+              <div class="news-card__body">
+                <div class="news-card__meta">
+                  <span class="tag">Ciencia</span
+                  ><time datetime="2026-08-15">15 ago. 2026</time>
+                </div>
+                <h2>Laboratorios que salen a escuchar el territorio</h2>
+                <p>
+                  La investigación colaborativa conecta datos, comunidad y
+                  soluciones.
+                </p>
+                <a class="text-link" href="detalle.html?id=3">Leer historia</a>
+              </div>
+            </article>
+          </div>
+          <p class="empty-state" id="no-results" hidden>
+            No encontramos noticias con esos criterios. Prueba otra búsqueda o
+            categoría.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Perspectiva · Periodismo para comprender.</p>
+        <p>Proyecto académico · 2026</p>
+      </div>
+    </footer>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/noticias.js"></script>
+  </body>
+</html>

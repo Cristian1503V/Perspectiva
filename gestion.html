@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Panel local para gestionar noticias de Perspectiva."
+    />
+    <title>Gestión de noticias | Perspectiva</title>
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="index.html" aria-label="Perspectiva, inicio"
+          ><span class="brand-mark" aria-hidden="true">P</span
+          ><span>Perspectiva</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          <span class="sr-only">Abrir menú</span>
+          <span aria-hidden="true"></span><span aria-hidden="true"></span
+          ><span aria-hidden="true"></span>
+        </button>
+        <nav
+          id="main-navigation"
+          class="main-navigation"
+          aria-label="Navegación principal"
+        >
+          <a href="index.html">Inicio</a>
+          <a href="noticias.html">Noticias</a>
+          <a href="favoritos.html"
+            >Favoritos
+            <span
+              id="favorites-nav-count"
+              class="nav-count"
+              aria-label="Noticias favoritas"
+              >0</span
+            ></a
+          >
+          <a href="contacto.html">Contacto</a>
+          <a href="gestion.html" aria-current="page">Gestión</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido-principal">
+      <section
+        class="page-heading page-heading--soft"
+        aria-labelledby="management-title"
+      >
+        <div class="container">
+          <p class="eyebrow">Panel editorial</p>
+          <h1 id="management-title">Gestión de noticias</h1>
+          <p class="page-intro">
+            Crea y elimina noticias en este prototipo. Los cambios se guardan
+            únicamente en este navegador.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Administración de noticias">
+        <div class="container management-layout">
+          <form id="article-form" class="form-card" novalidate>
+            <h2>Crear noticia</h2>
+            <p class="form-required">
+              Los campos marcados con * son obligatorios.
+            </p>
+            <div
+              id="article-status"
+              class="form-status"
+              role="status"
+              aria-live="polite"
+              tabindex="-1"
+            ></div>
+            <div class="form-field">
+              <label for="article-title"
+                >Título <span aria-hidden="true">*</span></label
+              >
+              <input
+                id="article-title"
+                name="title"
+                type="text"
+                required
+                aria-describedby="article-title-error"
+              />
+              <p
+                id="article-title-error"
+                class="field-error"
+                aria-live="polite"
+              ></p>
+            </div>
+            <div class="form-field">
+              <label for="article-category"
+                >Categoría <span aria-hidden="true">*</span></label
+              >
+              <select
+                id="article-category"
+                name="category"
+                required
+                aria-describedby="article-category-error"
+              >
+                <option value="">Selecciona una categoría</option>
+                <option value="Actualidad">Actualidad</option>
+                <option value="Cultura">Cultura</option>
+                <option value="Ciencia">Ciencia</option>
+                <option value="Tecnología">Tecnología</option>
+                <option value="Ambiente">Ambiente</option>
+              </select>
+              <p
+                id="article-category-error"
+                class="field-error"
+                aria-live="polite"
+              ></p>
+            </div>
+            <div class="form-field">
+              <label for="article-author"
+                >Autor o autora <span aria-hidden="true">*</span></label
+              >
+              <input
+                id="article-author"
+                name="author"
+                type="text"
+                required
+                aria-describedby="article-author-error"
+              />
+              <p
+                id="article-author-error"
+                class="field-error"
+                aria-live="polite"
+              ></p>
+            </div>
+            <div class="form-field">
+              <label for="article-excerpt"
+                >Resumen <span aria-hidden="true">*</span></label
+              >
+              <textarea
+                id="article-excerpt"
+                name="excerpt"
+                rows="3"
+                required
+                aria-describedby="article-excerpt-error"
+              ></textarea>
+              <p
+                id="article-excerpt-error"
+                class="field-error"
+                aria-live="polite"
+              ></p>
+            </div>
+            <div class="form-field">
+              <label for="article-content"
+                >Contenido <span aria-hidden="true">*</span></label
+              >
+              <textarea
+                id="article-content"
+                name="content"
+                rows="6"
+                required
+                aria-describedby="article-content-error"
+              ></textarea>
+              <p
+                id="article-content-error"
+                class="field-error"
+                aria-live="polite"
+              ></p>
+            </div>
+            <button class="button button--primary" type="submit">
+              Publicar noticia
+            </button>
+          </form>
+
+          <section class="management-list" aria-labelledby="managed-list-title">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Contenido local</p>
+                <h2 id="managed-list-title">Noticias publicadas</h2>
+              </div>
+              <p id="article-count" class="results-summary" aria-live="polite">
+                0 noticias
+              </p>
+            </div>
+            <div
+              id="article-list"
+              class="managed-articles"
+              aria-live="polite"
+            ></div>
+            <p
+              id="articles-empty"
+              class="empty-state empty-state--compact"
+              hidden
+            >
+              No hay noticias para mostrar.
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <a class="brand" href="index.html" aria-label="Perspectiva, inicio"
+          ><span class="brand-mark" aria-hidden="true">P</span
+          ><span>Perspectiva</span></a
+        >
+        <p>Periodismo para comprender lo que importa.</p>
+        <p class="footer-copy">
+          © <span id="current-year"></span> Perspectiva.
+        </p>
+      </div>
+    </footer>
+    <script src="js/data.js" defer></script>
+    <script src="js/storage.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/gestion.js" defer></script>
+  </body>
+</html>

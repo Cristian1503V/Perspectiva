@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Noticias guardadas para leer más tarde en Perspectiva."
+    />
+    <title>Favoritos | Perspectiva</title>
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="index.html" aria-label="Perspectiva, inicio">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <span>Perspectiva</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          <span class="sr-only">Abrir menú</span>
+          <span aria-hidden="true"></span><span aria-hidden="true"></span
+          ><span aria-hidden="true"></span>
+        </button>
+        <nav
+          id="main-navigation"
+          class="main-navigation"
+          aria-label="Navegación principal"
+        >
+          <a href="index.html">Inicio</a>
+          <a href="noticias.html">Noticias</a>
+          <a href="favoritos.html" aria-current="page"
+            >Favoritos
+            <span
+              id="favorites-nav-count"
+              class="nav-count"
+              aria-label="Noticias favoritas"
+              >0</span
+            ></a
+          >
+          <a href="contacto.html">Contacto</a>
+          <a href="gestion.html">Gestión</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido-principal">
+      <section
+        class="page-heading page-heading--soft"
+        aria-labelledby="favorites-title"
+      >
+        <div class="container">
+          <p class="eyebrow">Tu selección</p>
+          <h1 id="favorites-title">Noticias favoritas</h1>
+          <p class="page-intro">
+            Guarda las historias que quieres retomar. Permanecerán aquí incluso
+            cuando cierres el navegador.
+          </p>
+          <p class="results-summary" id="favorites-count" aria-live="polite">
+            0 noticias guardadas
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Lista de noticias favoritas">
+        <div class="container">
+          <div id="favorites-list" class="news-grid" aria-live="polite"></div>
+          <section
+            id="favorites-empty"
+            class="empty-state"
+            hidden
+            aria-labelledby="empty-favorites-title"
+          >
+            <div class="empty-state__icon" aria-hidden="true">☆</div>
+            <h2 id="empty-favorites-title">Aún no tienes favoritos</h2>
+            <p>
+              Cuando una noticia te interese, selecciónala con la estrella para
+              encontrarla fácilmente aquí.
+            </p>
+            <a class="button button--primary" href="noticias.html"
+              >Explorar noticias</a
+            >
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <a class="brand" href="index.html" aria-label="Perspectiva, inicio"
+          ><span class="brand-mark" aria-hidden="true">P</span
+          ><span>Perspectiva</span></a
+        >
+        <p>Periodismo para comprender lo que importa.</p>
+        <p class="footer-copy">
+          © <span id="current-year"></span> Perspectiva.
+        </p>
+      </div>
+    </footer>
+    <script src="js/data.js" defer></script>
+    <script src="js/storage.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/favoritos.js" defer></script>
+  </body>
+</html>
