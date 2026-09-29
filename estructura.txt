@@ -20,3 +20,5 @@ perspectiva/
     ├── favoritos.js
     ├── contacto.js
     └── gestion.js
+└── data/
+    ├── noticias.json
