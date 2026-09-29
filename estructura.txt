@@ -1,0 +1,22 @@
+perspectiva/
+├── index.html
+├── noticias.html
+├── detalle.html
+├── favoritos.html
+├── contacto.html
+├── gestion.html
+├── css/
+│   ├── tokens.css
+│   ├── base.css
+│   ├── components.css
+│   └── pages.css
+└── js/
+    ├── data.js
+    ├── storage.js
+    ├── ui.js
+    ├── home.js
+    ├── noticias.js
+    ├── detalle.js
+    ├── favoritos.js
+    ├── contacto.js
+    └── gestion.js
